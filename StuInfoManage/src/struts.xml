@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="stu" namespace="/stu" extends="struts-default">
+		<action name="stuAdd" class="com.stu.action.StuAdd">
+			<result name="success">../success.html</result>
+			<result name="error">../error.html</result>
+		</action>
+		<action name="stuSelect" class="com.stu.action.StuSelect">
+			<result name="success">sel.jsp</result>
+			<result name="error">../error.html</result>
+		</action>
+		<action name="stuUpdate" class="com.stu.action.StuUpdate">
+			<result name="success">../success.html</result>
+			<result name="error">../error.html</result>
+		</action>
+		<action name="stuDelete" class="com.stu.action.StuDelete">
+			<result name="success">../success.html</result>
+			<result name="error">../error.html</result>
+		</action>
+	</package>
+	
+	<package name="course" namespace="/course" extends="struts-default">
+		<action name="coAdd" class="com.course.action.CoAdd">
+			<result name="success">../success.html</result>
+			<result name="error">../error.html</result>
+		</action>
+		<action name="coSelect" class="com.course.action.CoSelect">
+			<result name="success">sel.jsp</result>
+			<result name="error">../error.html</result>
+		</action>
+		<action name="coDelete" class="com.course.action.CoDelete">
+			<result name="success">../success.html</result>
+			<result name="error">../error.html</result>
+		</action>
+	</package>
+	
+	<package name="class" namespace="/class" extends="struts-default">
+		<action name="classAdd" class="com.cla.action.ClaAdd">
+			<result name="success">../success.html</result>
+			<result name="error">../error.html</result>
+		</action>
+		<action name="classSelect" class="com.cla.action.ClaSelect">
+			<result name="success">sel.jsp</result>
+			<result name="error">../error.html</result>
+		</action>
+		<action name="classDelete" class="com.cla.action.ClaDelete">
+			<result name="success">../success.html</result>
+			<result name="error">../error.html</result>
+		</action>
+	</package>
+	
+	<package name="score" namespace="/score" extends="struts-default">
+		<action name="readyAdd" class="com.score.action.ReadyAdd">
+			<result name="success">add.jsp</result>
+			<result name="error">../error.html</result>
+		</action>
+		<action name="scoreAdd" class="com.score.action.ScoreAdd">
+			<result name="success">../success.html</result>
+			<result name="error">../error.html</result>
+		</action>
+		<action name="stuTj" class="com.score.action.StuTj">
+			<result name="success">stuInfo.jsp</result>
+			<result name="error">../error.html</result>
+		</action>
+		<action name="coTj" class="com.score.action.StuTj">
+			<result name="success">courseInfo.jsp</result>
+			<result name="error">../error.html</result>
+		</action>
+	</package>
+</struts>    

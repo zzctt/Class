@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>testHtml.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="js/jquery-1.4.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body background="blue">
+    <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column" style="padding-right:0;padding-left:0;">
+			<div class="list-group" >                                                                                                          
+				<a href="#" class="list-group-item active" style="width:100%">学生信息管理</a>
+				<div id="home1">
+				<div class="list-group-item">
+					<a href="stu/add.jsp" target='mainFrame'>添加学生信息</a>
+				</div>
+				<div class="list-group-item">
+					<a href="stu/stuSelect.action" target='mainFrame'>查询学生信息</a>
+				</div>	
+			</div>
+			<div class="list-group" >                                                                                                          
+				<a href="#" class="list-group-item active" style="width:100%">班级信息管理</a>
+				<div id="home2">
+				<div class="list-group-item">
+					<a href="class/add.jsp" target='mainFrame'>添加班级信息</a>
+				</div>
+				<div class="list-group-item">
+					<a href="class/classSelect.action" target='mainFrame'>查询班级信息</a>
+				</div>	
+			</div>
+			<div class="list-group" >                                                                                                          
+				<a href="#" class="list-group-item active" style="width:100%">课程信息</a>
+				<div id="home3">
+				<div class="list-group-item">
+					<a href="course/add.jsp" target='mainFrame'>添加课程</a>
+				</div>
+				<div class="list-group-item">
+					<a href="course/coSelect.action" target='mainFrame'>查询课程</a>
+				</div>	
+			</div>
+			<div class="list-group" >                                                                                                          
+				<a href="#" class="list-group-item active" style="width:100%">其他信息</a>
+				<div id="home4">
+				<div class="list-group-item">
+					<a href="score/readyAdd.action" target='mainFrame'>成绩录入/修改</a>
+				</div>
+				<div class="list-group-item">
+					<a href="score/stuTj.action" target='mainFrame'>学生成绩统计</a>
+				</div>	
+				<div class="list-group-item">
+					<a href="score/coTj.action" target='mainFrame'>课程分数统计</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+ </div>
+ </div>
+ </div>
+</div>
+  </body>
+   <script>
+   $(function(){
+  //事先隐藏home，help模块内容
+   $("#home1").hide(60);
+   $("#home2").hide(60);
+   $("#home3").hide(60);
+   $("#home4").hide(60);
+   //点击home，help内容隐藏
+   $(".active:eq(0)").click(function(){
+   $("#home1").slideToggle(60);
+   $("#home2").hide(60);
+   $("#home3").hide(60);
+   $("#home4").hide(60);
+   
+   });
+   $(".active:eq(1)").click(function(){
+   $("#home2").slideToggle(60);
+   $("#home1").hide(60);
+   $("#home3").hide(60);
+   $("#home4").hide(60);
+   
+   });
+    $(".active:eq(2)").click(function(){
+   $("#home3").slideToggle(60);
+   $("#home2").hide(60);
+   $("#home1").hide(60);
+   $("#home4").hide(60);
+   
+   });
+    $(".active:eq(3)").click(function(){
+   $("#home4").slideToggle(60);
+   $("#home2").hide(60);
+   $("#home3").hide(60);
+   $("#home1").hide(60);
+   
+   });
+   });
+   
+  </script>
+</html>
